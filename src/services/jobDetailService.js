@@ -2,10 +2,7 @@ import axios from 'axios';
 import { JOB_DETAILS_PATH, AXIOS_GET_CONFIG } from '../common/constants';
 
 export function getJobDetails(jobid) {
-  // const apiUrl =
-  // 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/4926de97-addf-4f0e-afde-44b83dad5d73.json';
-
-  const apiUrl = JOB_DETAILS_PATH + jobid + '.json'; //'/positions/4926de97-addf-4f0e-afde-44b83dad5d73.json';
+  const apiUrl = JOB_DETAILS_PATH + jobid + '.json';
 
   return new Promise((resolve, reject) => {
     let jobDetailResponse = {

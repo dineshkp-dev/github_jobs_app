@@ -5,8 +5,7 @@ import { JOBS_PER_PAGE, SORT_ORDER } from '../common/constants';
 import '../styles/table.css';
 
 function Table(props) {
-  const jobs = (props && props.jobs) || [];
-
+  const [jobs, setJobs] = useState([]);
   const [validJobTotal, setValidJobTotal] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchText, setSearchText] = useState('');
@@ -14,6 +13,9 @@ function Table(props) {
   const [sortOrder, setSortOrder] = useState(SORT_ORDER.ASC);
 
   const jobsData = useMemo(() => {
+    if (props && props.jobs) {
+      setJobs(props.jobs);
+    }
     let validJobs = jobs;
     if (searchText) {
       validJobs = validJobs.filter((job) =>
@@ -34,7 +36,7 @@ function Table(props) {
       (currentPage - 1) * JOBS_PER_PAGE,
       (currentPage - 1) * JOBS_PER_PAGE + JOBS_PER_PAGE
     );
-  }, [jobs, currentPage, searchText, sortOrder, sortLocation]);
+  }, [jobs, currentPage, searchText, sortOrder, sortLocation, props]);
 
   const getSearchText = (e) => {
     const text = e.target.value;

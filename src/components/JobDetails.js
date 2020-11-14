@@ -7,7 +7,6 @@ import LoadingIndicator from './LoadingIndicator';
 import { useAsyncError } from '../common/commonUtils';
 import ListError from './ListError';
 import { useHistory } from 'react-router-dom';
-// impot
 
 function JobDetails() {
   const [jobDetails, setJobDetails] = useState({});

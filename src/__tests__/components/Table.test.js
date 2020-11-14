@@ -64,6 +64,22 @@ describe('Table render test', () => {
     ).toBeInTheDocument();
   });
 
+  test('when no props are passed', () => {
+    render(
+      <Router>
+        <Table />
+      </Router>
+    );
+    expect(screen.getByText('Type')).toBeInTheDocument();
+    expect(screen.getByText('Title')).toBeInTheDocument();
+    expect(screen.getByText('Location')).toBeInTheDocument();
+    expect(screen.getByText('No Data is available')).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText('Filter by job-location')
+    ).toBeInTheDocument();
+    screen.debug();
+  });
+
   test('renders Table when jobs is empty', () => {
     const emptyJobs = [];
     render(

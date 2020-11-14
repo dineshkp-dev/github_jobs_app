@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import '../styles/error.css';
 import { HOME_PAGE_LINK } from '../common/constants';
 

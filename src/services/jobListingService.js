@@ -2,9 +2,7 @@ import axios from 'axios';
 import { JOB_LISTING_PATH, AXIOS_GET_CONFIG } from '../common/constants';
 
 export function getJobListing() {
-  //   const apiUrl =
-  //     'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=python&page=1';
-  const apiUrl = JOB_LISTING_PATH; //'/positions.json?description=python';
+  const apiUrl = JOB_LISTING_PATH;
 
   return new Promise((resolve, reject) => {
     let listResponse = {
