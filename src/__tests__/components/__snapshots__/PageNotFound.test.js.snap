@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound snapshot test renders 1`] = `
+<div>
+  <div
+    class="pagenotfound-container"
+  >
+    <h1
+      class="pagenotfound-title"
+    >
+      The page does not exist
+    </h1>
+    <div
+      class="pagenotfound-msg"
+    >
+      Please click 
+      <a
+        href="/"
+      >
+        here
+      </a>
+       to go to the home page
+    </div>
+  </div>
+</div>
+`;

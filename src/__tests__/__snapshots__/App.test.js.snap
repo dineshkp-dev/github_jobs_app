@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app snapshot test renders 1`] = `
+<div
+  className="start"
+>
+  <div
+    className="loading-indicator-container"
+  >
+    <h3
+      className="loading-title"
+    >
+      Loading...
+    </h3>
+    <div
+      className="loading-text"
+    >
+      Please wait for job listings to be updated
+    </div>
+  </div>
+</div>
+`;

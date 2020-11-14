@@ -1,0 +1,48 @@
+{
+  "name": "react_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.1",
+    "@testing-library/user-event": "^12.2.0",
+    "axios": "^0.21.0",
+    "env-cmd": "^10.1.0",
+    "html-react-parser": "^0.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/env-cmd -f .env.dev react-scripts start",
+    "build": "./node_modules/.bin/env-cmd -f .env.prod react-scripts build",
+    "build:deploy":"npm run build && aws s3 sync build/ s3://github-jobs-app",
+    "test": "react-scripts test --detectOpenHandles --testPathIgnorePatterns=src/__tests__/utils/",
+    "test:coverage": "./node_modules/.bin/env-cmd -f .env.dev react-scripts test --testPathIgnorePatterns=src/__tests__/utils/ --coverage --watchAll=false"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://jobs.github.com",
+  "devDependencies": {
+    "jest": "^26.6.0",
+    "react-test-renderer": "^17.0.1"
+  }
+}

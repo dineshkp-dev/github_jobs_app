@@ -1,0 +1,40 @@
+.jobdetails-howtoapply ul li,
+.jobdetails-description ul li {
+  margin-left: 20px;
+}
+.jobdetails-howtoapply ul li::before,
+.jobdetails-description ul li::before {
+  content: '•';
+  color: var(--primary-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul li {
+  list-style: none;
+}
+.jobdetails-goback {
+  cursor: pointer;
+}
+
+.jobdetails-header-container,
+.jobdetails-companydetails-container,
+.jobdetails-descripton-container,
+.jobdetails-howtoapply-container {
+  padding: 1rem 1rem;
+}
+
+.jobdetails-sub-section {
+  font-size: larger;
+}
+
+.jobdetails-header-container div,
+.jobdetails-companydetails-container div,
+.jobdetails-descripton-container div,
+.jobdetails-howtoapply-container div {
+  padding: 0.25rem 0;
+}
+
+.jobdetails-header-container .jobdetails-goback {
+  color: var(--secondary-color);
+}

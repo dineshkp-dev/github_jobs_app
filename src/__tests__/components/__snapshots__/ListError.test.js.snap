@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListError snapshot test renders 1`] = `
+<div>
+  <div
+    class="listerror-container"
+  >
+    <h3
+      class="listerror-title"
+    >
+      No listing found
+    </h3>
+    <div
+      class="listerror-text"
+    >
+      No listings available.
+    </div>
+  </div>
+</div>
+`;

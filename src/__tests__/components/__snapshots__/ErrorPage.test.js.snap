@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary snapshot test renders 1`] = `
+<div>
+  <div
+    class="error-container"
+  >
+    <h1
+      class="error-title"
+    >
+      Error!
+    </h1>
+    <div
+      class="error-msg"
+    >
+      <div
+        class="error-text"
+      >
+        Oops! An error occured.
+      </div>
+      Please click 
+      <a
+        href="/"
+      >
+        here
+      </a>
+       to go back to the home page
+    </div>
+  </div>
+</div>
+`;

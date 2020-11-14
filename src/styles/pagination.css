@@ -1,0 +1,52 @@
+.pagination-page {
+  padding: 1rem;
+}
+
+.pagination-container {
+  display: flex;
+  margin: 1rem 0rem;
+}
+.pagination-page.active-page {
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #000000;
+  width: 50px;
+  height: 50px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.button {
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button-text {
+  margin-top: 20px;
+  transition: 500ms;
+}
+
+.button-disabled {
+  user-select: none;
+}
+
+.button,
+.button-disabled {
+  text-align: center;
+}
+
+.button :hover {
+  background: var(--secondary-color);
+  color: #000000;
+}
+
+.pagination-class-indicator {
+  padding: 4px;
+  width: 55px;
+}
+
+.button-disabled,
+.button {
+  width: 60px;
+}

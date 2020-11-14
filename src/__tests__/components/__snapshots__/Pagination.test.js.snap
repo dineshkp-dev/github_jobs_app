@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination snapshot test renders 1`] = `
+<div>
+  <div
+    class="pagination-container"
+  >
+    <div
+      class="button-disabled"
+    >
+      <div
+        class="button-text"
+      >
+        Previous
+      </div>
+    </div>
+    <div
+      class="pagination-class-indicator"
+    >
+      <div
+        class="pagination-page active-page"
+      >
+        1
+      </div>
+    </div>
+    <div
+      class="button-disabled"
+    >
+      <div
+        class="button-text"
+      >
+        Next
+      </div>
+    </div>
+  </div>
+</div>
+`;

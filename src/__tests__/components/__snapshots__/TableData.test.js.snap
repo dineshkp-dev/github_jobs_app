@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableData snapshot test renders 1`] = `
+<div>
+  <tr>
+    <td>
+      Full Time
+    </td>
+    <td>
+      <a
+        href="/jobdetails/testid"
+      >
+        Full Stack Engineer
+      </a>
+    </td>
+    <td>
+      New York City
+    </td>
+  </tr>
+</div>
+`;

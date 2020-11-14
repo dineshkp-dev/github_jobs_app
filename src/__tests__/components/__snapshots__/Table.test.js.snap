@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table snapshot test renders 1`] = `
+<div>
+  <div
+    class="table"
+  >
+    <div
+      class="table-title"
+    >
+      <h1>
+        Job details
+      </h1>
+    </div>
+    <div
+      id="table-header-container"
+    >
+      <div
+        class="pagination-container"
+      >
+        <div
+          class="button-disabled"
+        >
+          <div
+            class="button-text"
+          >
+            Previous
+          </div>
+        </div>
+        <div
+          class="pagination-class-indicator"
+        >
+          <div
+            class="pagination-page active-page"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="button-disabled"
+        >
+          <div
+            class="button-text"
+          >
+            Next
+          </div>
+        </div>
+      </div>
+      <div
+        class="search-container"
+      >
+        <input
+          class="search-input"
+          id="search-input"
+          placeholder="  Filter by job-location"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <table
+      class="table-element"
+    >
+      <thead>
+        <tr>
+          <th>
+            Type 
+          </th>
+          <th>
+            Title
+          </th>
+          <th
+            class="sortable-column"
+          >
+            Location
+             
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Full Time
+          </td>
+          <td>
+            <a
+              href="/jobdetails/testid"
+            >
+              Full Stack Engineer
+            </a>
+          </td>
+          <td>
+            New York City
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
