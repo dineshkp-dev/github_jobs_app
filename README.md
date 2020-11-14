@@ -1,6 +1,12 @@
 #  Github Jobs Application for Python developers
 
-This project uses the github jobs API ([Github jobs API](https://jobs.github.com/api)) to display available jobs for Python developers. The application allows paginated results, allows users to filter based on location and also sort the locations
+This project uses the Github jobs API ([Github jobs API](https://jobs.github.com/api)) to display available jobs for Python developers. The application allows paginated results, allows users to filter based on location and also sort the locations.
+- Get list of jobs
+- The pages can be navigated using 'Next' and 'Previous' buttons
+- Filter based on location by entering location name into the filter input field
+- Sort the locations by clicking on the 'Locations' column header
+- Clicking on the 'Job Title' name provide more details about the job
+- In the details page, clicking on the 'Go back' link will bring user back to main page (eg. [Github API detailed information ](https://jobs.github.com/positions/425dc217-8bb6-44ee-bc52-8fa2207b565c.json))
 
 # Live preview
 
@@ -13,7 +19,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-To run the application in developer mode, please also use the local development server available at: [local dev server](https://github.com/dineshkp-dev/github_jobs_dev_server)
+To run the application in developer mode, please also use the local development server available at: [local dev server project](https://github.com/dineshkp-dev/github_jobs_dev_server)
 The configurations can be setup in the '.env.dev' file
 
 ### `npm run build`
