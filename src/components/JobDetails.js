@@ -15,8 +15,6 @@ function JobDetails() {
 
   let { jobid } = useParams();
 
-  console.log(jobid);
-
   const history = useHistory();
   const throwError = useAsyncError();
   useEffect(() => {
@@ -28,11 +26,9 @@ function JobDetails() {
           setError(true);
           setErrorMsg(jobDetailResponse.errorMsg);
         } else {
-          console.log(jobDetailResponse.jobDetail);
           setJobDetails(jobDetailResponse.jobDetail);
         }
       } catch (e) {
-        console.log(e);
         throwError(new Error(e));
       }
     }

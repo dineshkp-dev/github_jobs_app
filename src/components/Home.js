@@ -22,7 +22,6 @@ const Home = () => {
           setJobListing(listResponse.listings);
         }
       } catch (e) {
-        console.log(e);
         throwError(new Error(e));
       }
     }

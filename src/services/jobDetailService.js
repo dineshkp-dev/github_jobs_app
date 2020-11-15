@@ -17,7 +17,6 @@ export function getJobDetails(jobid) {
       .get(apiUrl, AXIOS_GET_CONFIG)
       .then((response) => {
         if (response && response.status === 200) {
-          console.log(response);
           if (
             response.data &&
             Object.keys(response.data).length > 0 &&
@@ -30,9 +29,6 @@ export function getJobDetails(jobid) {
           }
           resolve(jobDetailResponse);
         } else {
-          console.log(
-            'Error getting Job details data. Status: ' + response.statusText
-          );
           jobDetailResponse.error = true;
           jobDetailResponse.errorMsg =
             'Network Error getting Job details data. Status: ' +
@@ -41,7 +37,6 @@ export function getJobDetails(jobid) {
         }
       })
       .catch((err) => {
-        console.log(err);
         reject(
           'An error occurred when querying for the Job Details, please try again later'
         );

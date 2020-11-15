@@ -14,7 +14,6 @@ export function getJobListing() {
       .get(apiUrl, AXIOS_GET_CONFIG)
       .then((response) => {
         if (response && response.status === 200) {
-          console.log(response);
           if (response.data && response.data.length) {
             listResponse.listings = response.data;
           } else {
@@ -23,9 +22,6 @@ export function getJobListing() {
           }
           resolve(listResponse);
         } else {
-          console.log(
-            'Error getting Job listing data. Status: ' + response.statusText
-          );
           listResponse.error = true;
           listResponse.errorMsg =
             'Network Error getting Job listing data. Status: ' +
@@ -34,7 +30,6 @@ export function getJobListing() {
         }
       })
       .catch((err) => {
-        console.log(err);
         reject(
           'An error occurred when querying for the Job Listings, please try again later'
         );
