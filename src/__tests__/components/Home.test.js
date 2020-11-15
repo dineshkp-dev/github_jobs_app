@@ -36,13 +36,15 @@ describe('Home get results test', () => {
       </Router>
     );
     await waitFor(() => {
-      screen.getByText('Type');
-      screen.getByText('Title');
-      screen.getByText('Location');
-      screen.getByText('Full Time');
-      screen.getByText('Full Stack Engineer');
-      screen.getByText('New York City');
-      screen.getByPlaceholderText('Filter by job-location');
+      expect(screen.getByText('Type')).toBeInTheDocument();
+      expect(screen.getByText('Title')).toBeInTheDocument();
+      expect(screen.getByText('Location')).toBeInTheDocument();
+      expect(screen.getByText('Full Time')).toBeInTheDocument();
+      expect(screen.getByText('Full Stack Engineer')).toBeInTheDocument();
+      expect(screen.getByText('New York City')).toBeInTheDocument();
+      expect(
+        screen.getByPlaceholderText('Filter by job-location')
+      ).toBeInTheDocument();
     });
   });
 
@@ -55,9 +57,9 @@ describe('Home get results test', () => {
     );
     render(<Home />);
     await waitFor(() => {
-      screen.getByText('No listing found');
+      expect(screen.getByText('No listing found')).toBeInTheDocument();
     });
-    screen.getByText('Dummy error message');
+    expect(screen.getByText('Dummy error message')).toBeInTheDocument();
   });
 
   test('Reject from Listing Service', async () => {
@@ -70,10 +72,9 @@ describe('Home get results test', () => {
       </ErrorBoundary>
     );
     await waitFor(() => {
-      screen.getByText('Error!');
-      screen.getByText('DUMMY error');
-      screen.getByText(/Please click/i);
-      screen.debug();
+      expect(screen.getByText('Error!')).toBeInTheDocument();
+      expect(screen.getByText('DUMMY error')).toBeInTheDocument();
+      expect(screen.getByText(/Please click/i)).toBeInTheDocument();
     });
   });
 
@@ -87,10 +88,9 @@ describe('Home get results test', () => {
       </ErrorBoundary>
     );
     await waitFor(() => {
-      screen.getByText('Error!');
-      screen.getByText('Error: DUMMY error');
-      screen.getByText(/Please click/i);
-      screen.debug();
+      expect(screen.getByText('Error!')).toBeInTheDocument();
+      expect(screen.getByText('Error: DUMMY error')).toBeInTheDocument();
+      expect(screen.getByText(/Please click/i)).toBeInTheDocument();
     });
   });
 });

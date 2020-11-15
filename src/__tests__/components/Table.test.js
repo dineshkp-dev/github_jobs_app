@@ -1,7 +1,6 @@
 import Table from '../../components/Table';
 import { jobs, multiJobs, multiJobsMultiPage } from '../utils/testUtils';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { userEvent } from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter as Router } from 'react-router-dom';
 

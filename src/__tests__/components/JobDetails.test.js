@@ -43,11 +43,17 @@ describe('JobDetails get results test', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      screen.getByText('Job type: Full Time');
-      screen.getByText('Job Details');
-      screen.getByText('Job title: Full Stack Engineer');
-      screen.getByText('Job location: New York City');
-      screen.getByText('Please apply at the following website:');
+      expect(screen.getByText('Job type: Full Time')).toBeInTheDocument();
+      expect(screen.getByText('Job Details')).toBeInTheDocument();
+      expect(
+        screen.getByText('Job title: Full Stack Engineer')
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText('Job location: New York City')
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText('Please apply at the following website:')
+      ).toBeInTheDocument();
     });
   });
 
@@ -59,16 +65,22 @@ describe('JobDetails get results test', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      screen.getByText('Job type: Full Time');
-      screen.getByText('Job Details');
-      screen.getByText('Job title: Full Stack Engineer');
-      screen.getByText('Job location: New York City');
-      screen.getByText('Please apply at the following website:');
+      expect(screen.getByText('Job type: Full Time')).toBeInTheDocument();
+      expect(screen.getByText('Job Details')).toBeInTheDocument();
+      expect(
+        screen.getByText('Job title: Full Stack Engineer')
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText('Job location: New York City')
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText('Please apply at the following website:')
+      ).toBeInTheDocument();
     });
     const goBack = screen.getByText(/Go Back/);
     fireEvent.click(goBack);
     await waitFor(() => {
-      screen.getByText('Job Details');
+      expect(screen.getByText('Job Details')).toBeInTheDocument();
     });
   });
 });
@@ -87,8 +99,8 @@ describe('get empty results from JobDetails service test', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      screen.getByText('No listing found');
-      screen.getByText('Dummy error message');
+      expect(screen.getByText('No listing found')).toBeInTheDocument();
+      expect(screen.getByText('Dummy error message')).toBeInTheDocument();
     });
   });
 
@@ -104,10 +116,9 @@ describe('get empty results from JobDetails service test', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      screen.getByText('Error!');
-      screen.getByText('DUMMY error');
-      screen.getByText(/Please click/i);
-      screen.debug();
+      expect(screen.getByText('Error!')).toBeInTheDocument();
+      expect(screen.getByText('DUMMY error')).toBeInTheDocument();
+      expect(screen.getByText(/Please click/i)).toBeInTheDocument();
     });
   });
 
@@ -123,10 +134,9 @@ describe('get empty results from JobDetails service test', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      screen.getByText('Error!');
-      screen.getByText('Error: DUMMY error');
-      screen.getByText(/Please click/i);
-      screen.debug();
+      expect(screen.getByText('Error!')).toBeInTheDocument();
+      expect(screen.getByText('Error: DUMMY error')).toBeInTheDocument();
+      expect(screen.getByText(/Please click/i)).toBeInTheDocument();
     });
   });
 });
